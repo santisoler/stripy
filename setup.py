@@ -13,7 +13,7 @@
 
 
 
-from setuptools import setup, find_packages
+import setuptools
 from numpy.distutils.core import setup, Extension
 from os import path
 import io
@@ -45,10 +45,7 @@ if __name__ == "__main__":
           packages          = ['stripy'],
           install_requires  = ['numpy', 'scipy>=0.15.0'],
           python_requires   = '>=2.7, >=3.5',
-          package_data      = {'stripy': ['Notebooks/CartesianTriangulations/*ipynb',  # Worked Examples is not currently used
-                                          'Notebooks/SphericalTriangulations/*ipynb',
-                                          'Notebooks/Data/*'] },
-          include_package_data = True,
+          package_data={'stripy': ['notebooks/*']},
           classifiers       = ['Programming Language :: Python :: 2',
                                'Programming Language :: Python :: 2.6',
                                'Programming Language :: Python :: 2.7',
